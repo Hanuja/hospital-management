@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter text-[#0F172A] bg-[#F8FAFC] antialiased selection:bg-[#16A3A8] selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins text-[#0F172A];
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F4C81] hover:bg-[#0A3860] text-white px-6 py-3.5 text-sm font-semibold shadow-md hover:shadow-xl transition-all duration-300 active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white border-2 border-[#0F4C81] text-[#0F4C81] hover:bg-[#0F4C81] hover:text-white px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 active:scale-95 cursor-pointer;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#16A3A8] hover:bg-[#0F766E] text-white px-6 py-3.5 text-sm font-semibold shadow-md transition-all duration-300 active:scale-95 cursor-pointer;
+  }
+
+  .btn-emergency {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3.5 text-sm font-bold shadow-lg transition-all duration-300 active:scale-95 cursor-pointer animate-pulse;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-2xl border border-[#E2E8F0] shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 p-6;
+    box-shadow: 0 10px 40px -10px rgba(15, 76, 129, 0.08);
+  }
+  .card-premium:hover {
+    box-shadow: 0 20px 50px -12px rgba(15, 76, 129, 0.15);
+  }
+  
+  .glass-card {
+    @apply bg-white/85 backdrop-blur-md border border-white/40 rounded-2xl p-6;
+    box-shadow: 0 8px 32px 0 rgba(15, 76, 129, 0.12);
+  }
+
+  .badge-tag {
+    @apply text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC; 
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0F4C81; 
+}
+
+/* Print Receipt Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt, #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
