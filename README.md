@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# hospital-management
+>>>>>>> 6ac4bea6dd3ab950b5bf3fdd0afacc213c476d07
 # 🏥 MediCare Plus – Full-Stack Hospital Management Web Application
 
 MediCare Plus is a modern, premium, responsive full-stack Hospital Management System built with **React.js, Vite, Tailwind CSS, Framer Motion, PHP REST API, and MySQL**.
